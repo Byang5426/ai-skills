@@ -1,6 +1,6 @@
 ---
 name: learning-planner
-description: Produce a phased, evidence-based learning plan for a technology/skill or an existing project/codebase. Works through iterative Socratic questioning and correction to diagnose the learner's current level, goal, and constraints, then outputs staged roadmaps where each stage covers objectives, deliberate-practice tasks, real projects, self-checks, and exit criteria, and revises them as the learner progresses. Methods draw on the Dreyfus skill-acquisition stages, deliberate practice, the 20-hour rule, Bloom's taxonomy, project-based learning, and spaced repetition. Use when the user wants to 学习/上手/掌握 a technology or a project and asks for a 学习方案 / 学习路线 / 学习计划 / 怎么学 / 怎么上手 / study plan / learning roadmap. NOT for producing a software 设计方案/技术方案 — use project-design-planner for that.
+description: Produce a phased, evidence-based learning plan for a technology/skill or an existing project/codebase. Works through iterative Socratic questioning and correction to diagnose the learner's current level, goal, and constraints, then outputs staged roadmaps where each stage covers objectives, deliberate-practice tasks, real projects, self-checks, and exit criteria, and revises them as the learner progresses. Methods draw on the Dreyfus skill-acquisition stages, deliberate practice, the 20-hour rule, Bloom's taxonomy, project-based learning, and spaced repetition. Use when the user wants to 学习/上手/掌握 a technology or a project and asks for a 学习方案 / 学习路线 / 学习计划 / 怎么学 / 怎么上手 / study plan / learning roadmap. It does not produce a software 设计方案/技术方案 (that is a separate software-design task and is out of scope here).
 ---
 
 # Learning Planner（分阶段学习方案）
@@ -9,11 +9,11 @@ description: Produce a phased, evidence-based learning plan for a technology/ski
 
 方法论综合业界公认做法：**Dreyfus 五阶段**（定阶段）、**刻意练习**（练习设计）、**20 小时法则**（拆解+快速起步）、**Bloom 认知层级**（阶段目标与自检）、**项目驱动学习**（每阶段真实产出）、**间隔复习**（留存）。
 
-## 与 project-design-planner 的分工
+## 范围边界（学习方案，不是设计方案）
 
 - 想**学会/上手** → 本技能，产出**学习路线**。
-- 想**设计/改造**项目 → 用 `project-design-planner`，产出**设计方案**。
-- 学"一个项目"时，可**复用** `project-design-planner` 的代码库分析方法理解结构，但产出是"人怎么学会它"，不是"怎么建它"。
+- 想**设计/改造**项目 → 那是**软件设计类任务**，不在本技能范围（交给设计/技术方案类流程）。
+- 学"一个项目"时，可沿用通用的**代码库分析法**（自顶向下 + 自底向上）理解结构，但产出是"人怎么学会它"，不是"怎么建它"。
 
 ## 工作流
 
@@ -55,7 +55,7 @@ description: Produce a phased, evidence-based learning plan for a technology/ski
 
 ### 5. 迭代修正
 
-学习者反馈"太难/太易/时间不够/方向变了" → **调整方案**（增减内容、改节奏、换项目）。学项目时，新学到的业务知识建议写进 `.memory/`（配合 `domain-memory`）。
+学习者反馈"太难/太易/时间不够/方向变了" → **调整方案**（增减内容、改节奏、换项目）。学项目时，新学到的业务规则/坑建议记录到项目的**领域记忆文件**（若装有记忆类技能，交给它维护）。
 
 ## 关键原则
 

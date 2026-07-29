@@ -18,6 +18,7 @@
 - [ ] 无时间敏感信息
 - [ ] `name` 语义明确（非 helper/utils/tools）
 - [ ] 未写入 `~/.cursor/skills-cursor/`
+- [ ] 自包含：正文未硬写依赖其它技能的名字（跨技能边界放 description、用能力描述）
 
 ## 若包含脚本
 - [ ] 脚本真正解决问题，而非敷衍
