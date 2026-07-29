@@ -68,6 +68,41 @@ ln -s ~/ai-skills/skills/skill-builder ~/.cursor/skills/skill-builder
 
 ---
 
+## 外部依赖
+
+本仓库的技能是**说明书**，不打包第三方工具本体。以下为可选的外部能力，按需在每台机器单独安装（**不要**把它们的 skill 拷进本仓库）：
+
+| 依赖 | 用途 | 获取方式 |
+|------|------|----------|
+| **Firecrawl** | 联网搜索 / 网页抓取（供技能里的"联网参考"等使用） | Cursor 用**官方 firecrawl 插件**；其他工具用 `firecrawl init --agent <工具>` |
+
+> 说明：Firecrawl 的 skill 由 Cursor 插件或 `firecrawl init` 安装到**工具的全局目录**，不进本项目。它的 **CLI 本体 + 登录凭据是每台机器各自的**，不随仓库同步——见下方"新机器环境准备"。
+
+---
+
+## 新机器环境准备
+
+在一台新电脑上恢复本仓库能力，做两件事：
+
+**1. 装技能（本仓库）**
+
+```bash
+git clone https://github.com/Byang5426/ai-skills.git ~/ai-skills
+cp -R ~/ai-skills/skills/* ~/.cursor/skills/     # 或按需软链单个技能
+```
+
+**2. 装联网能力（Firecrawl，可选但推荐）**
+
+```bash
+npm install -g firecrawl-cli   # 装 CLI 本体（Cursor 里首次联网也会自动装）
+firecrawl login --browser      # 浏览器登录（凭据不跨机器同步，必须本人点一次）
+firecrawl --status             # 确认已认证
+```
+
+> 装完重启 / 重新加载 AI 会话即可。技能本身跟着仓库走，Firecrawl 的 CLI 与登录每台机器都要单独来一次。
+
+---
+
 ## 新增你自己的技能
 
 最省事的方式就是用本仓库的 **`skill-builder`**：装好后，直接对 AI 说
