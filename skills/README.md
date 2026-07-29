@@ -19,6 +19,7 @@ skills/
 | [`skill-builder`](skill-builder/SKILL.md) | 从自然语言需求生成符合 Cursor 规范的标准技能 |
 | [`project-design-planner`](project-design-planner/SKILL.md) | 分析项目并产出结构化设计方案/思路（Google Design Doc / RFC / C4 / ADR 结构） |
 | [`domain-memory`](domain-memory/SKILL.md) | 跨对话维护项目业务领域知识（可信度/出处/墓碑；Memory Bank + 语义记忆 + Zep 溯源） |
+| [`learning-planner`](learning-planner/SKILL.md) | 迭代提问 → 分阶段学习方案（Dreyfus / 刻意练习 / 20 小时法则 / Bloom / 项目驱动） |
 
 ## 新增技能
 
