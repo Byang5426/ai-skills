@@ -28,6 +28,7 @@ ai-skills/
 | 技能 | 作用 | 文档 |
 |------|------|------|
 | **skill-builder** | 用自然语言描述需求，自动生成符合 Cursor 官方规范的标准技能（含目录、`SKILL.md`、参考文件） | [SKILL.md](skills/skill-builder/SKILL.md) |
+| **project-design-planner** | 分析一个项目（现有代码库或描述中的项目），产出结构化设计方案/思路（背景、目标、设计、备选取舍、横切、落地），结构综合自 Google Design Doc / RFC / C4 / ADR | [SKILL.md](skills/project-design-planner/SKILL.md) |
 
 > 更多技能持续添加中。
 
