@@ -1,0 +1,25 @@
+# Skills
+
+本目录存放各个 Agent Skill，每个技能一个子目录，目录内必须有 `SKILL.md`。
+
+## 目录约定
+
+```
+skills/
+└── <skill-name>/
+    ├── SKILL.md            # 必须：主指令 + frontmatter(name/description)
+    └── references/         # 可选：渐进式披露的详细文档
+        └── *.md
+```
+
+## 现有技能
+
+| 技能 | 作用 |
+|------|------|
+| [`skill-builder`](skill-builder/SKILL.md) | 从自然语言需求生成符合 Cursor 规范的标准技能 |
+
+## 新增技能
+
+推荐直接用 `skill-builder`：向 AI 描述需求，它会按规范生成新技能目录。
+手写时请遵循 [`skill-builder/references/authoring-rules.md`](skill-builder/references/authoring-rules.md) 与
+[`skill-builder/references/checklist.md`](skill-builder/references/checklist.md)。
