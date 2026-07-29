@@ -11,10 +11,12 @@
 
 ```
 ai-skills/
-├── skills/                 # Agent 技能（每个技能一个目录，内含 SKILL.md）
-│   └── skill-builder/      # 从需求生成标准技能的“元技能”
-├── rules/                  # 可复用规则（编码规范、角色设定等）
-├── hooks/                  # 事件钩子脚本（会话启动、提交前等）
+├── skills/                     # Agent 技能（每个技能一个目录，内含 SKILL.md）
+│   ├── skill-builder/          # 从需求生成标准技能的“元技能”
+│   ├── project-design-planner/ # 分析项目 → 输出结构化设计方案/思路
+│   └── domain-memory/          # 跨对话维护项目业务领域知识
+├── rules/                      # 可复用规则（编码规范、角色设定等）
+├── hooks/                      # 事件钩子脚本（会话启动、提交前等）
 ├── LICENSE
 └── README.md
 ```
