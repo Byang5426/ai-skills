@@ -6,6 +6,7 @@
 - [ ] description 具体、含关键触发词
 - [ ] description 同时写清 WHAT 与 WHEN
 - [ ] description 用第三人称
+- [ ] frontmatter 是合法 YAML：不加引号的 `description` 值里无"冒号+空格"（`: `），不以特殊字符开头
 - [ ] SKILL.md 正文 < 500 行
 - [ ] 全程术语统一
 - [ ] 示例具体，非抽象

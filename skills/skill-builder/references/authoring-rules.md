@@ -38,6 +38,7 @@ skill-name/
    - ✅ "Extract text and tables from PDF files, fill forms, merge documents. Use when working with PDF files or when the user mentions PDFs, forms, or document extraction."
    - ❌ "Helps with documents"
 3. 若用户会用中文/英文两种说法触发，触发词两种都写进去。
+4. **YAML 安全**：`description` 不加引号时，值里**不能出现"冒号+空格"（`: `）**，否则会被当成嵌套映射报错（`mapping values are not allowed`）。改写成破折号/逗号，或整体用引号包裹（但要避开值里同款引号）。同理别以 `#`、`[`、`{`、`&`、`*` 等特殊字符开头。
 
 ## 核心写作原则
 
