@@ -12,12 +12,32 @@ description: Generate standard, spec-compliant Cursor Agent Skills from a plain-
 复制并跟踪这个清单：
 
 ```
+- [ ] 0. 评审（判断该不该做成 skill；陌生场景才联网参考）
 - [ ] 1. 收集需求（缺关键项才问，能推断就推断）
 - [ ] 2. 设计（定 name / description / 目录结构）
 - [ ] 3. 生成文件（SKILL.md + 可选 reference/examples/scripts）
 - [ ] 4. 自检（对照 references/checklist.md）
 - [ ] 5. 汇报（列出生成了什么、放在哪、如何触发）
 ```
+
+### 0. 评审（先判断，再动手）
+
+在生成任何文件之前，先过这道轻量决策门。
+
+**a. 适合性判断：这个需求该做成 skill 吗？** 对照下表，不适合就直接建议正确机制并停下，不要为建而建：
+
+| 需求特征 | 更合适的机制 |
+|----------|--------------|
+| 可复用的工作流 / 领域知识 / 输出格式 | ✅ **skill**（继续） |
+| 需独立上下文、扮演某角色、可被派活 | **subagent** |
+| 全局约束 / 编码风格 | **rule** |
+| 固定触发的一段指令 | **command** |
+| 连外部系统 / API / 数据库 | **MCP** |
+| 一次性、不会复用 | **直接做，别建** |
+
+**b.（可选）联网参考已有实现——仅在需要时触发。** 满足以下任一才联网：场景陌生 / 领域专业性强 / 用户明确要求参考。标准场景（commit message、代码审查等）直接走官方规范，不要联网。详细触发条件与检索方法见 [references/review-and-research.md](references/review-and-research.md)。
+
+> 保持轻量：评审只花几句话得出结论，不要长篇论证；联网默认关闭，按需开启。
 
 ### 1. 收集需求
 
@@ -81,6 +101,7 @@ description: <第三人称，WHAT + WHEN + 触发词>
 
 ## 参考
 
+- [references/review-and-research.md](references/review-and-research.md) — 适合性判断标准 + 联网参考的触发条件与方法
 - [references/authoring-rules.md](references/authoring-rules.md) — 完整的写作原则、模式与反模式
 - [references/example-skill.md](references/example-skill.md) — 端到端完整范例（需求→成品技能）
 - [references/checklist.md](references/checklist.md) — 定稿前对照清单
