@@ -15,7 +15,8 @@ ai-skills/
 │   ├── skill-builder/          # 从需求生成标准技能的“元技能”
 │   ├── project-design-planner/ # 分析项目 → 输出结构化设计方案/思路
 │   ├── domain-memory/          # 跨对话维护项目业务领域知识
-│   └── learning-planner/       # 迭代提问 → 输出分阶段学习方案
+│   ├── learning-planner/       # 迭代提问 → 输出分阶段学习方案
+│   └── testing/                # 写测试/TDD：红-绿-重构 + 金字塔/AAA/FIRST + 反模式
 ├── rules/                      # 可复用规则（编码规范、角色设定等）
 ├── hooks/                      # 事件钩子脚本（会话启动、提交前等）
 ├── LICENSE
@@ -34,6 +35,7 @@ ai-skills/
 | **project-design-planner** | 分析一个项目（现有代码库或描述中的项目），产出结构化设计方案/思路（背景、目标、设计、备选取舍、横切、落地），结构综合自 Google Design Doc / RFC / C4 / ADR | [SKILL.md](skills/project-design-planner/SKILL.md) |
 | **domain-memory** | 跨对话维护项目的业务领域知识（带可信度/出处/墓碑），写业务代码前读、学到新规则时写；综合 Memory Bank / 语义记忆 / Zep 溯源等热门做法 | [SKILL.md](skills/domain-memory/SKILL.md) |
 | **learning-planner** | 通过迭代提问+修正，为一门技术或一个项目产出分阶段学习方案（目标/练习/项目/自检）；综合 Dreyfus / 刻意练习 / 20 小时法则 / Bloom / 项目驱动学习 | [SKILL.md](skills/learning-planner/SKILL.md) |
+| **testing** | 写/补测试与 TDD：红-绿-重构循环 + 测试金字塔/AAA/FIRST，规避过度 mock、测实现细节、flaky 等反模式，测试即验证闭环 | [SKILL.md](skills/testing/SKILL.md) |
 
 > 更多技能持续添加中。
 
