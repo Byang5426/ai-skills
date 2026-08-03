@@ -1,6 +1,6 @@
 ---
 name: learning-planner
-description: Produce a phased, evidence-based learning plan for a technology/skill or an existing project/codebase. Works through iterative Socratic questioning and correction to diagnose the learner's current level, goal, and constraints, then outputs staged roadmaps where each stage covers objectives, deliberate-practice tasks, real projects, self-checks, and exit criteria, and revises them as the learner progresses. Methods draw on the Dreyfus skill-acquisition stages, deliberate practice, the 20-hour rule, Bloom's taxonomy, project-based learning, and spaced repetition. Use when the user wants to 学习/上手/掌握 a technology or a project and asks for a 学习方案 / 学习路线 / 学习计划 / 怎么学 / 怎么上手 / study plan / learning roadmap. It also gates progression by confirming each stage is actually completed and by quizzing the learner (active recall) across rounds until answers show real understanding before advancing. It does not produce a software 设计方案/技术方案 (that is a separate software-design task and is out of scope here).
+description: Produce a phased, evidence-based learning plan for a technology/skill or an existing project/codebase. Works through iterative Socratic questioning and correction to diagnose the learner's current level, goal, and constraints, then outputs staged roadmaps where each stage covers objectives, deliberate-practice tasks, real projects, self-checks, and exit criteria, and revises them as the learner progresses. Methods draw on the Dreyfus skill-acquisition stages, deliberate practice, the 20-hour rule, Bloom's taxonomy, project-based learning, and spaced repetition. Use when the user wants to 学习/上手/掌握 a technology or a project and asks for a 学习方案 / 学习路线 / 学习计划 / 怎么学 / 怎么上手 / study plan / learning roadmap. It also gates progression by confirming each stage is actually completed and by quizzing the learner (active recall) across rounds until answers show real understanding before advancing. Every explanation and evaluation it gives states its basis (the source such as a doc/article/section, or the principle and reasoning) and flags inferences as such, so the learner can verify rather than take assertions on faith. It does not produce a software 设计方案/技术方案 (that is a separate software-design task and is out of scope here).
 ---
 
 # Learning Planner（分阶段学习方案）
@@ -70,7 +70,7 @@ description: Produce a phased, evidence-based learning plan for a technology/ski
 **闸门 2 · 理解验收（提问到真懂为止）**
 - **用主动回忆式提问检验**，不是让他重读，而是让他**回答/复述**。
 - 每轮 2~4 个问题，覆盖 Bloom 高层：不只"是什么"，更问"**为什么这么设计 / 什么时候用 / 与 X 的区别 / 举个反例**"。
-- **评估回答**：答对且能讲清 → 正反馈并进下一阶段；含糊或错 → **指出缺口、补讲、换角度再问**，如此循环。
+- **评估回答**：答对且能讲清 → 正反馈并进下一阶段；含糊或错 → **指出缺口、补讲、换角度再问**，如此循环。**评估要说明依据**：对照哪条标准/出处判定对错，别只给"对/错"。
 - **通过标准（费曼）**：能用**自己的话**讲清核心 + 能**迁移到新情境**，而不是背诵；关键问题需**连续答对**。
 - 纪律：一次问一组、就事论事；**不为难也不放水**。答不上就当"没学透"回到内容，别硬推进。
 
@@ -83,6 +83,7 @@ description: Produce a phased, evidence-based learning plan for a technology/ski
 - **阶段可检验**：每阶段有出阶段标准，避免"学了但不会用"。
 - **达标才推进**：完成确认 + 理解验收都过才进下一阶段；答不上就回到内容，不硬推。
 - **验收靠回答不靠重读**：用主动回忆提问检验理解，能自己讲清并迁移才算懂。
+- **答案给依据（重要）**：每次讲解 / 评估 / 给结论，都附**依据**——出处（文档 / 文章 / 章节，能给链接或路径就给）或所依据的**原理 / 推理链**；**没有确切出处的判断标注为"（推断）"**，不硬当事实。呼应最佳实践"show evidence, not assertions"。
 - **深度匹配目标**：只想"够用"就别排到专家阶段（避免过度工程）。
 - **先问再排**：信息不足时继续访谈，不要凭空给一份通用计划。
 
